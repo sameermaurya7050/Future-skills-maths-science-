@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Skills</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Arial,sans-serif;
+ background:#f2f6ff;color:#172554;
+}
+header{
+ background:#1746a2;color:white;
+ padding:25px 18px;border-radius:0 0 25px 25px;
+}
+header h1{margin:0;font-size:28px}
+header p{margin-bottom:0}
+main{padding:18px}
+h2{font-size:21px}
+.grid{
+ display:grid;grid-template-columns:1fr 1fr;gap:13px;
+}
+.card{
+ background:white;padding:20px 12px;
+ border-radius:15px;text-align:center;
+ box-shadow:0 3px 12px #00000010;
+}
+.card span{font-size:30px}
+.card h3{margin:10px 0 5px}
+button{
+ border:0;background:#1746a2;color:white;
+ padding:12px 18px;border-radius:10px;
+ font-size:15px;cursor:pointer;
+}
+.section{
+ background:white;padding:18px;
+ border-radius:15px;margin-top:16px;
+}
+footer{text-align:center;padding:20px;color:#64748b}
+.hidden{display:none}
+</style>
+</head>
+<body>
+
+<header>
+ <h1>🚀 Future Skills</h1>
+ <p>Learn • Practice • Grow</p>
+ <p>Welcome to Your Learning App!</p>
+</header>
+
+<main>
+ <h2>📚 Our Courses</h2>
+
+ <div class="grid">
+  <div class="card">
+   <span>📐</span>
+   <h3>Maths</h3>
+   <p>Class 7–10</p>
+   <button onclick="show('maths')">Open</button>
+  </div>
+
+  <div class="card">
+   <span>🔬</span>
+   <h3>Science</h3>
+   <p>Learn Science</p>
+   <button onclick="show('science')">Open</button>
+  </div>
+
+  <div class="card">
+   <span>📝</span>
+   <h3>Quiz</h3>
+   <p>Test your knowledge</p>
+   <button onclick="show('quiz')">Start</button>
+  </div>
+
+  <div class="card">
+   <span>🎥</span>
+   <h3>Online Class</h3>
+   <p>Learn together</p>
+   <button onclick="show('class')">Open</button>
+  </div>
+ </div>
+
+ <div id="home" class="section">
+  <h2>🌟 About Future Skills</h2>
+  <p>यह ऐप Maths और Science सीखने वाले विद्यार्थियों के लिए बनाया गया है।</p>
+ </div>
+
+ <div id="maths" class="section hidden">
+  <h2>📐 Maths</h2>
+  <p>Mathematics में आपका स्वागत है।</p>
+  <p>जल्द ही यहाँ Class 7 से 10 तक के Notes और Questions मिलेंगे।</p>
+  <button onclick="show('home')">Back Home</button>
+ </div>
+
+ <div id="science" class="section hidden">
+  <h2>🔬 Science</h2>
+  <p>Science में आपका स्वागत है।</p>
+  <p>यहाँ Physics, Chemistry और Biology पढ़ेंगे।</p>
+  <button onclick="show('home')">Back Home</button>
+ </div>
+
+ <div id="quiz" class="section hidden">
+  <h2>📝 Maths Quiz</h2>
+  <p>10 × 5 = ?</p>
+  <button onclick="answer(50)">50</button>
+  <button onclick="answer(40)">40</button>
+  <p id="result"></p>
+  <button onclick="show('home')">Back Home</button>
+ </div>
+
+ <div id="class" class="section hidden">
+  <h2>🎥 Online Class</h2>
+  <p>यहाँ Online Class का लिंक जोड़ा जाएगा।</p>
+  <button onclick="show('home')">Back Home</button>
+ </div>
+</main>
+
+<footer>
+ © 2026 Future Skills | All Rights Reserved
+</footer>
+
+<script>
+function show(id){
+ document.querySelectorAll('.section').forEach(
+  s=>s.classList.add('hidden')
+ );
+ document.getElementById(id).classList.remove('hidden');
+}
+function answer(n){
+ document.getElementById('result').innerText =
+ n===50 ? '🎉 Correct Answer!' : 'Try Again!';
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Skills Maths</title>
+<style>
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f1f5ff;
+  color:#172554;
+}
+header {
+  background:#1746a2;
+  color:white;
+  padding:22px;
+  border-radius:0 0 22px 22px;
+}
+main {padding:16px}
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.card,.section {
+  background:white;
+  padding:16px;
+  border-radius:15px;
+  margin-bottom:12px;
+  box-shadow:0 2px 10px #0001;
+}
+button {
+  background:#1746a2;
+  color:white;
+  border:0;
+  border-radius:9px;
+  padding:12px;
+  margin:5px 0;
+  font-size:15px;
+}
+.card button {width:100%}
+.hidden {display:none}
+.chapter {
+  background:#edf3ff;
+  padding:13px;
+  border-radius:10px;
+  margin:9px 0;
+}
+.back {background:#475569}
+footer {
+  text-align:center;
+  padding:20px;
+  color:#64748b;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📐 Future Skills Maths</h1>
+  <p>Learn • Practice • Grow</p>
+  <p>Choose Your Class</p>
+</header>
+
+<main>
+<div id="home">
+  <h2>📚 Select Your Class</h2>
+  <div class="grid">
+    <div class="card">
+      <h2>Class 7</h2>
+      <button onclick="openClass(7)">Open</button>
+    </div>
+    <div class="card">
+      <h2>Class 8</h2>
+      <button onclick="openClass(8)">Open</button>
+    </div>
+    <div class="card">
+      <h2>Class 9</h2>
+      <button onclick="openClass(9)">Open</button>
+    </div>
+    <div class="card">
+      <h2>Class 10</h2>
+      <button onclick="openClass(10)">Open</button>
+    </div>
+  </div>
+</div>
+
+<div id="classPage" class="hidden">
+  <h2 id="classTitle"></h2>
+  <p>Select a chapter:</p>
+  <div id="chapterList"></div>
+  <button class="back" onclick="goHome()">Back Home</button>
+</div>
+
+<div id="lessonPage" class="hidden">
+  <h2 id="lessonTitle"></h2>
+  <div class="section">
+    <h3>📖 Short Notes</h3>
+    <p id="lessonNotes"></p>
+  </div>
+  <div class="section">
+    <h3>📝 Practice Question</h3>
+    <p id="question"></p>
+    <div id="options"></div>
+    <p id="result"></p>
+  </div>
+  <button class="back" onclick="goClass()">Back to Chapters</button>
+</div>
+</main>
+
+<footer>© 2026 Future Skills</footer>
+
+<script>
+const chapters = {
+7: [
+"Integers",
+"Fractions and Decimals",
+"Data Handling",
+"Simple Equations",
+"Lines and Angles",
+"Triangles",
+"Comparing Quantities",
+"Rational Numbers"
+],
+8: [
+"Rational Numbers",
+"Linear Equations",
+"Understanding Quadrilaterals",
+"Data Handling",
+"Squares and Square Roots",
+"Cubes and Cube Roots",
+"Comparing Quantities",
+"Algebraic Expressions"
+],
+9: [
+"Number Systems",
+"Polynomials",
+"Coordinate Geometry",
+"Linear Equations",
+"Lines and Angles",
+"Triangles",
+"Quadrilaterals",
+"Circles",
+"Statistics"
+],
+10: [
+"Real Numbers",
+"Polynomials",
+"Pair of Linear Equations",
+"Quadratic Equations",
+"Arithmetic Progressions",
+"Triangles",
+"Coordinate Geometry",
+"Introduction to Trigonometry",
+"Statistics"
+]
+};
+
+function openClass(n) {
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("lessonPage").classList.add("hidden");
+  document.getElementById("classPage").classList.remove("hidden");
+
+  document.getElementById("classTitle").innerText =
+    "📐 Class " + n + " Maths";
+
+  let list = document.getElementById("chapterList");
+  list.innerHTML = "";
+
+  chapters[n].forEach((chapter,i) => {
+    let div = document.createElement("div");
+    div.className = "chapter";
+
+    let title = document.createElement("b");
+    title.innerText = "Chapter " + (i+1) + ": " + chapter;
+
+    let btn = document.createElement("button");
+    btn.innerText = "Open Notes";
+    btn.onclick = () => openLesson(n,chapter);
+
+    div.appendChild(title);
+    div.appendChild(document.createElement("br"));
+    div.appendChild(btn);
+    list.appendChild(div);
+  });
+}
+
+function openLesson(n,chapter) {
+  document.getElementById("classPage").classList.add("hidden");
+  document.getElementById("lessonPage").classList.remove("hidden");
+
+  document.getElementById("lessonTitle").innerText =
+    "Class " + n + " – " + chapter;
+
+  document.getElementById("lessonNotes").innerText =
+    "इस Chapter के पूरे Notes, सूत्र और Step-by-Step Solutions जल्द जोड़े जाएँगे।";
+
+  document.getElementById("question").innerText =
+    "10 + 5 = कितना होगा?";
+
+  document.getElementById("result").innerText = "";
+
+  let options = document.getElementById("options");
+  options.innerHTML = "";
+
+  [10,15,20].forEach(num => {
+    let btn = document.createElement("button");
+    btn.innerText = num;
+    btn.onclick = () => {
+      document.getElementById("result").innerText =
+        num === 15 ? "Correct Answer! 🎉" : "Try Again!";
+    };
+    options.appendChild(btn);
+  });
+}
+
+function goHome() {
+  document.getElementById("classPage").classList.add("hidden");
+  document.getElementById("lessonPage").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+}
+
+function goClass() {
+  document.getElementById("lessonPage").classList.add("hidden");
+  document.getElementById("classPage").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
+
+function openLesson(n,chapter) {
+  document.getElementById("classPage").classList.add("hidden");
+  document.getElementById("lessonPage").classList.remove("hidden");
+
+  document.getElementById("lessonTitle").innerText =
+    "Class " + n + " – " + chapter;
+
+  let notes = "इस Chapter के Notes जल्द जोड़े जाएँगे।";
+  let question = "10 + 5 = कितना होगा?";
+  let answers = [10,15,20];
+  let correct = 15;
+
+  if(n === 7 && chapter === "Integers") {
+    notes = `पूर्णांक (Integers):
+1. धनात्मक संख्याएँ: 1, 2, 3...
+2. ऋणात्मक संख्याएँ: -1, -2, -3...
+3. शून्य: 0
+
+जोड़ के नियम:
+(+)+(+)=धनात्मक
+(-)+(-)=ऋणात्मक
+(+)+(-)=घटाना
+
+उदाहरण:
+(-5)+8 = 3
+
+क्योंकि 8-5=3 और 8 बड़ा है।`;
+
+    question = "(-7) + 12 = ?";
+    answers = [5, -5, 19];
+    correct = 5;
+  }
+
+  document.getElementById("lessonNotes").innerText = notes;
+  document.getElementById("question").innerText = question;
+  document.getElementById("result").innerText = "";
+
+  let options = document.getElementById("options");
+  options.innerHTML = "";
+
+  answers.forEach(num => {
+    let btn = document.createElement("button");
+    btn.innerText = num;
+    btn.onclick = () => {
+      document.getElementById("result").innerText =
+        num === correct ? "Correct Answer! 🎉" : "Try Again!";
+    };
+    options.appendChild(btn);
+  });
+}
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Skills - Class 7 Maths</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f6ff;margin:0;padding:16px;color:#172554}
+header{background:#1746a2;color:white;padding:18px;border-radius:12px;text-align:center}
+.card{background:white;padding:16px;margin-top:15px;border-radius:12px;box-shadow:0 2px 8px #ccd}
+button{background:#1746a2;color:white;border:0;padding:12px 16px;border-radius:8px;margin:5px;cursor:pointer}
+h2{color:#1746a2}
+.answer{background:#e7f5e9;padding:10px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Future Skills</h1>
+<p>Maths Learning App</p>
+</header>
+
+<div class="card">
+<h2>Class 7 – Mathematics</h2>
+<button onclick="showLesson()">Chapter 1: Integers</button>
+</div>
+
+<div id="lesson"></div>
+
+<script>
+function showLesson(){
+document.getElementById("lesson").innerHTML=`
+<div class="card">
+<h2>Chapter 1: Integers (पूर्णांक)</h2>
+
+<h3>1. पूर्णांक क्या हैं?</h3>
+<p>धनात्मक संख्याएँ, ऋणात्मक संख्याएँ और शून्य मिलकर पूर्णांक कहलाते हैं।</p>
+<p>उदाहरण: -5, -2, 0, 3, 8</p>
+
+<h3>2. संख्या रेखा</h3>
+<p>संख्या रेखा पर शून्य के दाईं ओर धनात्मक और बाईं ओर ऋणात्मक संख्याएँ होती हैं।</p>
+<p><b>उदाहरण:</b> -3, -2, -1, 0, 1, 2, 3</p>
+
+<h3>3. जोड़ के नियम</h3>
+<ul>
+<li>समान चिन्ह: संख्याओं को जोड़ें और वही चिन्ह रखें।</li>
+<li>अलग चिन्ह: बड़ी संख्या में से छोटी संख्या घटाएँ और बड़ी संख्या का चिन्ह रखें।</li>
+</ul>
+<p>उदाहरण: (-4) + (-3) = -7</p>
+<p>उदाहरण: (-8) + 5 = -3</p>
+
+<h3>4. घटाव</h3>
+<p>किसी संख्या को घटाने के लिए उसके विपरीत चिन्ह वाली संख्या जोड़ें।</p>
+<p>उदाहरण: 5 - (-3) = 5 + 3 = 8</p>
+
+<h3>5. गुणा और भाग</h3>
+<ul>
+<li>समान चिन्ह का गुणा या भाग = धनात्मक उत्तर।</li>
+<li>अलग चिन्ह का गुणा या भाग = ऋणात्मक उत्तर।</li>
+</ul>
+<p>उदाहरण: (-4) × (-2) = 8</p>
+<p>उदाहरण: (-12) ÷ 3 = -4</p>
+
+<h3>6. अभ्यास प्रश्न</h3>
+<p>प्रश्न 1: (-5) + (-3) = ?</p>
+<button onclick="check(1)">उत्तर देखें</button>
+<p id="a1"></p>
+
+<p>प्रश्न 2: (-8) + 4 = ?</p>
+<button onclick="check(2)">उत्तर देखें</button>
+<p id="a2"></p>
+
+<p>प्रश्न 3: 6 - (-2) = ?</p>
+<button onclick="check(3)">उत्तर देखें</button>
+<p id="a3"></p>
+
+<p>प्रश्न 4: (-3) × 4 = ?</p>
+<button onclick="check(4)">उत्तर देखें</button>
+<p id="a4"></p>
+</div>`;
+}
+
+function check(n){
+const answers={
+1:"-8",
+2:"-4",
+3:"8",
+4:"-12"
+};
+document.getElementById("a"+n).innerHTML=
+"सही उत्तर: <b>"+answers[n]+"</b>";
+}
+</script>
+</body>
+</html>
